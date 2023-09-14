@@ -46,6 +46,7 @@ class Anagrams
         string_as_numbers1.sort == string_as_numbers2.sort
     end
 
+    #O(n(log(n)))
 
     def fourth_anagram(string1, string2)
         counter1 = Hash.new(0)
