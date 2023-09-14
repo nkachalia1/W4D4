@@ -1,4 +1,4 @@
-# class TimeComp
+class TimeComp
     list1 = [ 0, 3, 5, 4, -5, 10, 1, 90 ]
     list2 = [5, 3, -7]
     list3 = [2, 3, -6, 7, -6, 7]
@@ -17,6 +17,8 @@
         current_min
     end
 
+    # O(n**2)
+
     def my_min_list_2(arr)
         current_min = arr[0]
         arr.each do |el|
@@ -27,11 +29,13 @@
         current_min
     end
 
+    # O(n)
+
     def subsum(arr)
         subsums =[]
         (0...arr.length-1).each do |start|
             (start...arr.length).each do |stop|
-                subsums << arr[start..stop] 
+                subsums << arr[start..stop]
             end
         end
         current_max = subsums[0].sum
@@ -42,7 +46,9 @@
         end
         current_max
     end
-# end
+end
+
+# O(n**2)
 
 p my_min_list(list1)
 p subsum(list2)
